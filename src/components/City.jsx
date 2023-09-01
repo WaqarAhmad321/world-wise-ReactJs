@@ -1,5 +1,9 @@
-import { useParams, useSearchParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
+import { useCities } from "../contexts/CitiesContext";
 import styles from "./City.module.css";
+import Spinner from "./Spinner";
+import ButtonBack from "./ButtonBack";
 
 const formatDate = (date) =>
   new Intl.DateTimeFormat("en", {
@@ -10,60 +14,46 @@ const formatDate = (date) =>
   }).format(new Date(date));
 
 function City() {
-  // TEMP DATA
   const { id } = useParams();
-  const [searchParams, setSearchParams] = useSearchParams();
-  const lat = searchParams.get("lat");
-  const lng = searchParams.get("lng");
-
-  const currentCity = {
-    cityName: "Lisbon",
-    emoji: "🇵🇹",
-    date: "2027-10-31T15:59:59.138Z",
-    notes: "My favorite city so far!",
-  };
-
+  const { getCity, currentCity, isLoading } = useCities();
+  useEffect(() => {
+    getCity(id);
+  }, [id]);
+  console.log(currentCity);
   const { cityName, emoji, date, notes } = currentCity;
+
+  if (isLoading) return <Spinner />;
 
   return (
     <div className={styles.city}>
-      <h1>City{id}</h1>
-      <p>
-        Position : {lat}, {lng}
-      </p>
-      {/* <div className={styles.row}>
+      <div className={styles.row}>
         <h6>City name</h6>
         <h3>
           <span>{emoji}</span> {cityName}
         </h3>
       </div>
-
       <div className={styles.row}>
         <h6>You went to {cityName} on</h6>
         <p>{formatDate(date || null)}</p>
       </div>
-
       {notes && (
         <div className={styles.row}>
           <h6>Your notes</h6>
           <p>{notes}</p>
         </div>
       )}
-
       <div className={styles.row}>
         <h6>Learn more</h6>
         <a
           href={`https://en.wikipedia.org/wiki/${cityName}`}
           target="_blank"
-          rel="noreferrer"
-        >
+          rel="noreferrer">
           Check out {cityName} on Wikipedia &rarr;
         </a>
       </div>
-
       <div>
         <ButtonBack />
-      </div> */}
+      </div>
     </div>
   );
 }
