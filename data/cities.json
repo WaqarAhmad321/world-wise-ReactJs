@@ -1,40 +1,103 @@
 {
   "cities": [
     {
-      "cityName": "Lisbon",
-      "country": "Portugal",
-      "emoji": "🇵🇰",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
-      "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
-      },
-      "id": 73930385
-    },
-    {
-      "cityName": "Madrid",
+      "cityName": "Montellano",
       "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2027-07-15T08:22:53.976Z",
-      "notes": "",
+      "notes": "kjlk",
+      "date": "2023-09-14T19:00:00.000Z",
       "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
+        "lat": "37.00255267215955",
+        "lng": "-5.5810546875"
       },
-      "id": 17806751
+      "id": 98443203
     },
     {
-      "cityName": "Berlin",
-      "country": "Germany",
-      "emoji": "🇩🇪",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
+      "cityName": "Reina",
+      "country": "Spain",
+      "notes": "k",
+      "date": "2023-09-05T19:00:00.000Z",
       "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
+        "lat": "38.151837403006766",
+        "lng": "-5.976562500000001"
       },
-      "id": 98443197
+      "id": 98443204
+    },
+    {
+      "cityName": "Reina",
+      "country": "Spain",
+      "notes": "kj",
+      "date": "2023-09-05T19:00:00.000Z",
+      "position": {
+        "lat": "38.151837403006766",
+        "lng": "-5.976562500000001"
+      },
+      "id": 98443205
+    },
+    {
+      "cityName": "Reina",
+      "country": "Spain",
+      "notes": "lkj",
+      "date": "2023-09-18T19:00:00.000Z",
+      "position": {
+        "lat": "38.151837403006766",
+        "lng": "-5.976562500000001"
+      },
+      "id": 98443206
+    },
+    {
+      "cityName": "Reina",
+      "country": "Spain",
+      "notes": "kj",
+      "date": "2023-09-09T19:00:00.000Z",
+      "position": {
+        "lat": "38.151837403006766",
+        "lng": "-5.976562500000001"
+      },
+      "id": 98443207
+    },
+    {
+      "cityName": "Tartu",
+      "country": "Estonia",
+      "notes": "kj",
+      "date": "2023-09-06T19:00:00.000Z",
+      "position": {
+        "lat": "58.35563036280967",
+        "lng": "26.542968750000004"
+      },
+      "id": 98443208
+    },
+    {
+      "cityName": "Valderas",
+      "country": "Spain",
+      "notes": "klj",
+      "date": "2023-09-05T19:00:00.000Z",
+      "position": {
+        "lat": "42.06560675405716",
+        "lng": "-5.405273437500001"
+      },
+      "id": 98443209
+    },
+    {
+      "cityName": "Montpouillan",
+      "country": "France",
+      "notes": "lkj",
+      "date": "2023-09-10T19:00:00.000Z",
+      "position": {
+        "lat": "44.465151013519645",
+        "lng": "0.10986328125000001"
+      },
+      "id": 98443210
+    },
+    {
+      "cityName": "Fuentes de Nava",
+      "country": "Spain",
+      "notes": "k",
+      "date": "2023-09-05T19:00:00.000Z",
+      "position": {
+        "lat": "42.06560675405716",
+        "lng": "-4.812011718750001"
+      },
+      "id": 98443211
     }
   ]
 }
