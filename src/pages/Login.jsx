@@ -1,14 +1,27 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import styles from "./Login.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useAuth } from "../contexts/FakeAuthContext";
+
 export default function Login() {
-  // PRE-FILL FOR DEV PURPOSES
   const [email, setEmail] = useState("jack@example.com");
   const [password, setPassword] = useState("qwerty");
+  const { login, isAuthenticated } = useAuth();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (isAuthenticated === true) navigate("/app");
+  });
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    if (email && password) login(email, password);
+  }
 
   return (
     <main className={styles.login}>
-      <form className={styles.form}>
+      <form className={styles.form} onClick={handleSubmit}>
         <div className={styles.row}>
           <label htmlFor="email">Email address</label>
           <input
@@ -30,7 +43,9 @@ export default function Login() {
         </div>
 
         <div>
-          <NavLink className="cta">Login</NavLink>
+          <NavLink className="cta">
+            Login
+          </NavLink>
         </div>
       </form>
     </main>
