@@ -10,8 +10,8 @@ export default function Login() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (isAuthenticated === true) navigate("/app");
-  });
+    if (isAuthenticated) navigate("/app", {replace: true});
+  }, [isAuthenticated, navigate]);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -43,9 +43,7 @@ export default function Login() {
         </div>
 
         <div>
-          <NavLink className="cta">
-            Login
-          </NavLink>
+          <NavLink className="cta">Login</NavLink>
         </div>
       </form>
     </main>
