@@ -1,7 +1,7 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import styles from "./Login.module.css";
 import { useEffect, useState } from "react";
-import { useAuth } from "../contexts/FakeAuthContext";
+import useAuth from "../hooks/useAuth";
 
 export default function Login() {
   const [email, setEmail] = useState("jack@example.com");
@@ -10,7 +10,7 @@ export default function Login() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (isAuthenticated) navigate("/app", {replace: true});
+    if (isAuthenticated) navigate("/app", { replace: true });
   }, [isAuthenticated, navigate]);
 
   function handleSubmit(e) {

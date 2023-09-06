@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
-import { useCities } from "../contexts/CitiesContext";
+import useCities from "../hooks/useCities";
 import styles from "./City.module.css";
 import Spinner from "./Spinner";
 import ButtonBack from "./ButtonBack";
@@ -18,9 +18,9 @@ function City() {
   const { getCity, currentCity, isLoading } = useCities();
   useEffect(() => {
     getCity(id);
-  }, [id]);
+  }, [id, getCity]);
 
-  const { cityName, emoji, date, notes } = currentCity;
+  const { cityName, date, notes } = currentCity;
 
   if (isLoading) return <Spinner />;
 
