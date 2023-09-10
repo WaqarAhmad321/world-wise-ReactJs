@@ -41,15 +41,14 @@ Install the dependencies
   npm install
 ```
 
-```bash
-  npm run server
-```
 
 Start the server
 
 ```bash
   npm run dev
 ```
+## Must run this command to start the fake json server (go to data folder)
+
 ```bash
   npm run server
 ```
