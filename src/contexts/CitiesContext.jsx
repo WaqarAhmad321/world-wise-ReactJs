@@ -1,12 +1,11 @@
 import {
   createContext,
   useEffect,
-  useContext,
   useReducer,
   useCallback,
 } from "react";
 
-const BASE_URL = "http://localhost:8000";
+const BASE_URL = "https://worldwise-json-server.vercel.app";
 
 const CitiesContext = createContext();
 

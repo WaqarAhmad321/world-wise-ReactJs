@@ -1,7 +1,15 @@
-import { Suspense, lazy } from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { lazy, Suspense } from "react";
+
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+
+import City from "./components/City";
+import Form from "./components/Form";
+import CityList from "./components/CityList";
+import CountryList from "./components/CountryList";
+import ProtectedRoute from "./components/ProtectedRoute";
 import { CitiesProvider } from "./contexts/CitiesContext";
 import { AuthProvider } from "./contexts/FakeAuthContext";
+import SpinnerFullPage from "./components/SpinnerFullPage";
 
 const HomePage = lazy(() => import("./pages/HomePage"));
 const Product = lazy(() => import("./pages/Product"));
@@ -9,13 +17,6 @@ const Pricing = lazy(() => import("./pages/Pricing"));
 const AppLayout = lazy(() => import("./pages/AppLayout"));
 const Login = lazy(() => import("./pages/Login"));
 const PageNotFound = lazy(() => import("./pages/PageNotFound"));
-
-import CityList from "./components/CityList";
-import CountryList from "./components/CountryList";
-import City from "./components/City";
-import Form from "./components/Form";
-import ProtectedRoute from "./components/ProtectedRoute";
-import SpinnerFullPage from "./components/SpinnerFullPage";
 
 function App() {
   return (
